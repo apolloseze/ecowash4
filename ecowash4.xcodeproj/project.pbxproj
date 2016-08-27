@@ -14,6 +14,7 @@
 		DC6BB6401D67A03A002742E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6BB63E1D67A03A002742E2 /* LaunchScreen.storyboard */; };
 		DC6BB64B1D67A03A002742E2 /* ecowash4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BB64A1D67A03A002742E2 /* ecowash4Tests.swift */; };
 		DC6BB6561D67A03A002742E2 /* ecowash4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BB6551D67A03A002742E2 /* ecowash4UITests.swift */; };
+		DCDC70771D6A4EE1000ADA08 /* upload.png in Resources */ = {isa = PBXBuildFile; fileRef = DCDC70761D6A4EE1000ADA08 /* upload.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DC6BB6511D67A03A002742E2 /* ecowash4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ecowash4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC6BB6551D67A03A002742E2 /* ecowash4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ecowash4UITests.swift; sourceTree = "<group>"; };
 		DC6BB6571D67A03A002742E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCDC70761D6A4EE1000ADA08 /* upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upload.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		DC6BB6341D67A03A002742E2 /* ecowash4 */ = {
 			isa = PBXGroup;
 			children = (
+				DCDC70761D6A4EE1000ADA08 /* upload.png */,
 				DC6BB6351D67A03A002742E2 /* AppDelegate.swift */,
 				DC6BB6371D67A03A002742E2 /* ViewController.swift */,
 				DC6BB6391D67A03A002742E2 /* Main.storyboard */,
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					DC6BB6311D67A03A002742E2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = LQV7GEBS47;
 					};
 					DC6BB6451D67A03A002742E2 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -231,6 +235,7 @@
 			files = (
 				DC6BB6401D67A03A002742E2 /* LaunchScreen.storyboard in Resources */,
 				DC6BB63D1D67A03A002742E2 /* Assets.xcassets in Resources */,
+				DCDC70771D6A4EE1000ADA08 /* upload.png in Resources */,
 				DC6BB63B1D67A03A002742E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,10 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ecowash4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theecowash.ecowash4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ecowash4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theecowash.ecowash4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +495,7 @@
 				DC6BB65C1D67A03A002742E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC6BB65D1D67A03A002742E2 /* Build configuration list for PBXNativeTarget "ecowash4Tests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +504,7 @@
 				DC6BB65F1D67A03A002742E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC6BB6601D67A03A002742E2 /* Build configuration list for PBXNativeTarget "ecowash4UITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +513,7 @@
 				DC6BB6621D67A03A002742E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

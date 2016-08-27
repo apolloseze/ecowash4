@@ -1,25 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ecowash4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qx6-cB-CtA">
+                                <rect key="frame" x="-8" y="0.0" width="391" height="623"/>
+                                <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="evV-t8-8f0"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PMC-ph-eDc">
+                                <rect key="frame" x="166" y="316" width="45" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="MKT-hO-bd9"/>
+                                    <constraint firstAttribute="width" constant="45" id="Zp0-OL-5L8"/>
+                                    <constraint firstAttribute="width" secondItem="PMC-ph-eDc" secondAttribute="height" multiplier="45:37" id="nIs-db-Zhm"/>
+                                </constraints>
+                                <color key="color" red="0.16776418439999999" green="0.2178302389" blue="0.85566907049999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGv-hk-8GQ">
+                                <rect key="frame" x="-4" y="623" width="383" height="44"/>
+                                <items>
+                                    <barButtonItem style="done" systemItem="rewind" id="MyI-Q1-BFG">
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="goBack" destination="Qx6-cB-CtA" id="wEg-Re-CO9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8Mb-KC-viU"/>
+                                    <barButtonItem style="done" systemItem="fastForward" id="bez-ZZ-Vo0">
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="goForward" destination="Qx6-cB-CtA" id="bRA-bJ-TMt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PMC-ph-eDc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1eX-I4-ud3"/>
+                            <constraint firstItem="Qx6-cB-CtA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-24" id="Fzw-zI-6uA"/>
+                            <constraint firstItem="PMC-ph-eDc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qtu-P9-rXg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CGv-hk-8GQ" secondAttribute="bottom" id="TNX-h6-AgS"/>
+                            <constraint firstItem="CGv-hk-8GQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="a9H-yJ-5Mo"/>
+                            <constraint firstItem="Qx6-cB-CtA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="bJr-Mc-zOP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CGv-hk-8GQ" secondAttribute="trailing" constant="-20" id="cAe-HR-RkX"/>
+                            <constraint firstItem="CGv-hk-8GQ" firstAttribute="top" secondItem="Qx6-cB-CtA" secondAttribute="bottom" id="qER-Ep-SAq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qx6-cB-CtA" secondAttribute="trailing" constant="-24" id="tvz-3K-2NZ"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="ActInd" destination="PMC-ph-eDc" id="PK6-OL-pHC"/>
+                        <outlet property="WebView" destination="Qx6-cB-CtA" id="jTK-br-ob0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="350" y="353"/>
         </scene>
     </scenes>
 </document>
